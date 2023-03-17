@@ -10,16 +10,6 @@ import CardComponent from "./components/cardcomponent";
 //Social Media Dashboard
 //This application will show a social dashboard that is responsive and styled
 //Peer review by Maddie: The site itself looks great in my opinion, and the application works as it should. The switch functions, and the hover effect as well. Everything seems to be in the right position with appropriate margins and spacing, and aside from certain items looking too large, like the switch button for example, it seems very close to the prototype we were given. Really good job!!
-white_check_mark
-eyes
-raised_hands
-
-
-
-
-
-1:50
-btw your css file is terrifyingly long
 
 function App() {
   const [isToggled, setToggled] = useState(false);
