@@ -1,38 +1,735 @@
-.App {
-  text-align: center;
+html, body, #root{
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App{
+  height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.homeContainer.container{
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  min-width: none;
+  width: 100%;
+  height: 245px;
+  display: flex;
+  flex-direction: column;
+  background-color: #F7F8FE;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.homeContainerDark.container{
+  margin: 0;
+  padding: 0;
+  max-width: 100%;
+  min-width: none;
+  width: 100%;
+  height: 245px;
+  display: flex;
+  flex-direction: column;
+  background-color: #212230;
+}
+
+.homeRow.row{
+  margin: 0;
+  padding: 0;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+}
+
+.homeCol.col{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.darkModeRow.row{
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  margin-top: -55px;
+}
+
+.darkBtn{
+  margin: 0;
+  padding: 0;
+  width: 50px !important;
+  height: 25px;
+  border: none;
+  border-radius: 24px;
+  background-color: hsl(230, 22%, 74%);
+}
+
+.darkModeText{
+  width: 100px !important;
+  font-size: 20px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  color: hsl(228, 12%, 44%);
+}
+
+.darkModeTextDark{
+  width: 100px !important;
+  font-size: 20px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  color: hsl(228, 34%, 66%);
+}
+
+.text{
+  font-size: 40px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.text2{
+  font-size: 20px;
+  margin: 0;
+  color: hsl(228, 12%, 44%);
+  font-weight: 700;
+}
+
+.textDark{
+  font-size: 40px;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+
+.text2Dark{
+  font-size: 20px;
+  color: hsl(228, 34%, 66%);
+  font-weight: 700;
+}
+
+.textBox{
+  width: 1110px;
+}
+
+.buttonBox{
+  display: flex;
+  justify-content: end;
+  width: 1110px !important;
+}
+
+label {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 30px;
+}
+
+input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+span {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: hsl(230, 22%, 74%);
+  transition: 0.3s;
+  border-radius: 30px;
+}
+
+span:before {
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 25px;
+  left: 3px;
+  bottom: 2.6px;
+  background-color: #fff;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input:checked + span {
+  background: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  transition: 0.3s;
+}
+
+input:checked + span:before {
+  transform: translateX(29px);
+  background: rgb(33, 34, 48);
+}
+
+.cardDivFacebook{
+  background-color: #252B43;
+  height: 215px;
+  width: 250px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  border-top-style: solid;
+  border-top-color: hsl(208, 92%, 53%);
+  border-top-width: 5px;
+}
+
+.cardDivFacebook :hover{
+  background-color: #333A56;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cardDivFacebookLight{
+  background-color: #F0F4FA;
+  height: 215px;
+  width: 250px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  border-top-style: solid;
+  border-top-color: hsl(208, 92%, 53%);
+  border-top-width: 5px;
+}
+
+.cardDivFacebookLight :hover{
+  background-color: #DFE3F0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cardDivTwitter{
+  background-color: #252B43;
+  height: 215px;
+  width: 250px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  border-top-style: solid;
+  border-top-color: hsl(203, 89%, 53%);
+  border-top-width: 5px;
+}
+
+.cardDivTwitter :hover{
+  background-color: #333A56;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cardDivTwitterLight{
+  background-color: #F0F4FA;
+  height: 215px;
+  width: 250px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  border-top-style: solid;
+  border-top-color: hsl(203, 89%, 53%);
+  border-top-width: 5px;
+}
+
+.cardDivTwitterLight :hover{
+  background-color: #DFE3F0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cardDivInstagram{
+  background-color: #252B43;
+  height: 215px;
+  width: 250px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+}
+
+.cardDivInstagram :hover{
+  background-color: #333A56;
+  border-radius: 0px 0px 8px 8px;
+  cursor: pointer;
+}
+
+.cardDivInstagramLight{
+  background-color: #F0F4FA;
+  height: 215px;
+  width: 250px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+}
+
+.cardDivInstagramLight :hover{
+  background-color: #DFE3F0;
+  border-radius: 0px 0px 8px 8px;
+  cursor: pointer;
+}
+
+.instaBorder{
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  border-radius: 8px 8px 0 0;
+}
+
+.cardDivYoutube{
+  background-color: #252B43;
+  height: 215px;
+  width: 250px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  border-top-style: solid;
+  border-top-color: red;
+  border-top-width: 5px;
+}
+
+.cardDivYoutube :hover{
+  background-color: #333A56;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.cardDivYoutubeLight{
+  background-color: #F0F4FA;
+  height: 215px;
+  width: 250px;
+  margin-bottom: 25px;
+  border-radius: 8px;
+  border-top-style: solid;
+  border-top-color: red;
+  border-top-width: 5px;
+}
+
+.cardDivYoutubeLight :hover{
+  background-color: #DFE3F0;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+
+
+.cardContainer.container{
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: -100px;
+}
+
+.cardRow.row{
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 1141px;
+}
+
+.cardRow2.row{
+  padding: 0 !important;
+  margin: 0 !important;
+  width: 1110px;
+}
+
+.cardCol.col{
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.cardInfo{
+  width: 100%;
+  height: 210px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cardInfoRow{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.facebookPic{
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 20px !important;
+  height: 20px;
+}
+
+.facebookPicRow.row{
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.atText{
+  margin: 0;
+  padding: 0 !important;
+  width: 100px !important;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(228, 34%, 66%);
+  font-weight: 700;
+}
+
+.atTextLight{
+  margin: 0;
+  padding: 0 !important;
+  width: 100px !important;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(228, 12%, 44%);
+  font-weight: 700;
+}
+
+.numberText{
+  font-size: 65px;
+  font-weight: 700px;
+  text-align: center;
+  color: white;
+  margin: 0;
+}
+
+.numberTextLight{
+  font-size: 65px;
+  font-weight: 700px;
+  text-align: center;
+  color: black;
+  margin: 0;
+}
+
+.followerText{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: hsl(228, 34%, 66%);
+  font-weight: 400;
+  margin: 0;
+}
+
+.followerTextLight{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  color: hsl(228, 12%, 44%);
+  font-weight: 400;
+  margin: 0;
+}
+
+.upDownRow.row{
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.upDownText{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto !important;
+  color: hsl(163, 72%, 41%);
+  margin: 0;
+  padding: 0 !important;
+}
+
+.upDownTextRed{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto !important;
+  color: hsl(356, 69%, 56%);
+  margin: 0;
+  padding: 0 !important;
+}
+
+.upPic{
+  margin: 0;
+  padding: 0 !important;
+  width: 8px !important;
+  height: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px !important;
+}
+
+.downPic{
+  margin: 0;
+  padding: 0 !important;
+  width: 8px !important;
+  height: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 5px !important;
+}
+
+.overviewText{
+  color: white;
+  font-weight: 700;
+  padding: 0 !important;
+  margin-bottom: 25px;
+}
+
+.overviewTextLight{
+  color: hsl(228, 12%, 44%);
+  font-weight: 700;
+  padding: 0 !important;
+  margin-bottom: 25px;
+}
+
+.smallBox{
+  width: 250px;
+  height: 125px;
+  border-radius: 8px;
+  background-color: #252B43;
+  margin-bottom: 25px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.smallBoxDark{
+  width: 250px;
+  height: 125px;
+  border-radius: 8px;
+  background-color: #F1F3FA;
+  margin-bottom: 25px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.donutWrapper :hover{
+  background-color: #333A56;
+  cursor: pointer;
+}
+
+.donutWrapperDark :hover{
+  background-color: #DFE3F0;
+  cursor: pointer;
+}
+
+.donutWrapper{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.donutWrapperDark{
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+.smallRow.row{
+  margin: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  justify-content: space-between;
+}
+
+.smallText{
+  padding: 0 !important;
+  margin: 0;
+  font-size: 14px;
+  width: 125px !important;
+  color: hsl(228, 34%, 66%);
+}
+
+.smallTextLight{
+  padding: 0 !important;
+  margin: 0;
+  font-size: 14px;
+  width: 125px !important;
+  color: hsl(228, 12%, 44%);
+}
+
+.smallNumberText{
+  padding: 0 !important;
+  margin: 0;
+  font-size: 35px;
+  font-weight: 700;
+  width: 100px !important;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.smallNumberTextLight{
+  padding: 0 !important;
+  margin: 0;
+  font-size: 35px;
+  font-weight: 700;
+  width: 100px !important;
+  color: black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.smallDiv{
+  padding: 0 !important;
+  width: 100px !important;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.smallCheckText{
+  padding: 0 !important;
+  margin: 0;
+  font-size: 14px;
+  width: auto !important;
+  color: hsl(163, 72%, 41%);
+}
+
+.smallCheckTextRed{
+  padding: 0 !important;
+  margin: 0;
+  font-size: 14px;
+  width: auto !important;
+  color: hsl(356, 69%, 56%);
+}
+
+.arrowDiv{
+  margin: 0 !important;
+  padding: 0 !important;
+  height: 16.8px !important;
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 1024px) {
+  html, body, #root{
+    height: auto;
   }
-  to {
-    transform: rotate(360deg);
+
+  .cardRow.row{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cardRow2.row{
+    width: 90%;
+  }
+
+  .homeRow.row{
+    width: 90%;
+    padding-bottom: 20px;
+    margin-bottom: 10px;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #363A4E;
+  }
+
+  .homeContainer.container{
+    display: flex;
+    align-items: center;
+  }
+
+  .darkModeRow.row{
+    margin: 0;
+    width: 90%;
+  }
+
+  .cardContainer.container{
+    margin-top: -50px;
+  }
+
+  .text{
+    font-size: 26px;
+    margin: 0;
+    font-weight: 700;
+  }
+  
+  .text2{
+    font-size: 16px;
+    margin: 0;
+    color: hsl(228, 12%, 44%);
+    font-weight: 700;
+  }
+  
+  .textDark{
+    font-size: 26px;
+    color: hsl(0, 0%, 100%);
+    font-weight: 700;
+  }
+  
+  .text2Dark{
+    font-size: 16px;
+    color: hsl(228, 34%, 66%);
+    font-weight: 700;
+  }
+
+  .cardDivFacebook{
+    height: 220px;
+    width: 330px;
+  }
+  
+  .cardDivFacebookLight{
+    height: 220px;
+    width: 330px;
+  }
+  
+  .cardDivTwitter{
+    height: 220px;
+    width: 330px;
+  }
+  
+  .cardDivTwitterLight{
+    height: 220px;
+    width: 330px;
+  }
+  
+  .cardDivInstagram{
+    height: 220px;
+    width: 330px;
+  }
+  .cardDivInstagramLight{
+    height: 220px;
+    width: 330px;
+  }
+  
+  .cardDivYoutube{
+    height: 220px;
+    width: 330px;
+  }
+  
+  .cardDivYoutubeLight{
+    height: 220px;
+    width: 330px;
+  }
+
+  .buttonBox{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .smallBox{
+    height: 125px;
+    width: 330px;
+  }
+
+  .smallBoxDark{
+    height: 125px;
+    width: 330px;
+  }
+
+  .smallBox{
+    margin-bottom: 20px;
+  }
+  
+  .smallBoxDark{
+    margin-bottom: 20px;
   }
 }
